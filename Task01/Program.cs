@@ -16,5 +16,5 @@ if (numberA == numberB * numberB)
 }
 else
 {
-    Console.WriteLine($"Да, число {numberA} не является квадратом числа {numberB}");
+    Console.WriteLine($"Да, число {numberA} является квадратом числа {numberB}");
 }
