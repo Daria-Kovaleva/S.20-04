@@ -8,22 +8,23 @@
 Console.Write("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
+if (number < 0) number = number * (-1);
 if (number >= 10000 && number <= 99999)
 {
     bool palindrome = Palindrome(number);
     Console.Write(palindrome ? $"{number} -> да" : $"{number} -> нет");
-
-    bool Palindrome(int num)
-    {
-        int firstDigit = num / 10000;
-        int fifthDigit = num % 10;
-        int secondDigit = (num / 1000) % 10;
-        int fourthDigit = (num / 10) % 10;
-        if (firstDigit == fifthDigit && secondDigit == fourthDigit)
-        {
-            return true;
-        }
-        return false;
-    }
 }
 else Console.WriteLine("Неккоректный ввод! Введите пятизначное число");
+
+bool Palindrome(int num)
+{
+    int firstDigit = num / 10000;
+    int fifthDigit = num % 10;
+    int secondDigit = (num / 1000) % 10;
+    int fourthDigit = (num / 10) % 10;
+    if (firstDigit == fifthDigit && secondDigit == fourthDigit)
+    {
+        return true;
+    }
+    return false;
+}
