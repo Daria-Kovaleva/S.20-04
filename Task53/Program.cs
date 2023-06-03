@@ -46,8 +46,3 @@ void ReplaceMatrixElem(int[,] matrix)
     }
 }
 
-int[,] array2d = CreateMatrixRndInt(3, 3, 0, 100);
-PrintMatrix(array2d);
-ReplaceMatrixElem(array2d);
-Console.WriteLine();
-PrintMatrix(array2d);
