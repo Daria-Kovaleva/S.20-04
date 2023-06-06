@@ -8,7 +8,7 @@ int numberM = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите натуральное число N: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
-if(numberM == 0 || numberN == 0) Console.WriteLine("Введите числа больше 0!");
+if(numberM <= 0 || numberN <= 0) Console.WriteLine("Введите числа больше 0!");
 else
 {
 int sumElemInInterval = SumElemInInterval(numberM, numberN);
